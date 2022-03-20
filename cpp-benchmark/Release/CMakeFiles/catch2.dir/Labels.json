@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/cpp-benchmark/Release/CMakeFiles/catch2"
+		},
+		{
+			"file" : "/homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/cpp-benchmark/Release/CMakeFiles/catch2.rule"
+		},
+		{
+			"file" : "/homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/cpp-benchmark/Release/CMakeFiles/catch2-complete.rule"
+		},
+		{
+			"file" : "/homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/cpp-benchmark/Release/catch2-prefix/src/catch2-stamp/catch2-install.rule"
+		},
+		{
+			"file" : "/homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/cpp-benchmark/Release/catch2-prefix/src/catch2-stamp/catch2-mkdir.rule"
+		},
+		{
+			"file" : "/homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/cpp-benchmark/Release/catch2-prefix/src/catch2-stamp/catch2-download.rule"
+		},
+		{
+			"file" : "/homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/cpp-benchmark/Release/catch2-prefix/src/catch2-stamp/catch2-update.rule"
+		},
+		{
+			"file" : "/homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/cpp-benchmark/Release/catch2-prefix/src/catch2-stamp/catch2-patch.rule"
+		},
+		{
+			"file" : "/homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/cpp-benchmark/Release/catch2-prefix/src/catch2-stamp/catch2-configure.rule"
+		},
+		{
+			"file" : "/homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/cpp-benchmark/Release/catch2-prefix/src/catch2-stamp/catch2-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"catch2"
+		],
+		"name" : "catch2"
+	}
+}

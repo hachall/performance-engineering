@@ -1,0 +1,10 @@
+dontinline,*.*_all_jmhStub
+dontinline,*.*_avgt_jmhStub
+dontinline,*.*_sample_jmhStub
+dontinline,*.*_ss_jmhStub
+dontinline,*.*_thrpt_jmhStub
+inline,uk/ac/ic/doc/co339/cw1/MyBenchmark$MyState.doSetup
+inline,uk/ac/ic/doc/co339/cw1/MyBenchmark.baseFlink_SelectNearestCenterMap
+inline,uk/ac/ic/doc/co339/cw1/MyBenchmark.eliminateCandidatesFromDistanceCalc_SelectNearestCenterMap
+inline,uk/ac/ic/doc/co339/cw1/MyBenchmark.inlineDistanceFunction_SelectNearestCenterMap
+inline,uk/ac/ic/doc/co339/cw1/MyBenchmark.removeUnnecessarySQRT_SelectNearestCenterMap

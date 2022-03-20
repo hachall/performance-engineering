@@ -1,0 +1,758 @@
+Script started on 2020-02-12 17:18:26+0000
+hh1919@texel06:java-benchmark$ exitmvn install && java -jar target/benchmarks.jar[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kmvn install && java -jar target/benchmarks.jar
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------< [0;36muk.ac.ic.doc.co339.cw1:java-benchmark[0;1m >----------------[m
+[[1;34mINFO[m] [1mBuilding JMH benchmark sample: Java 1.0[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mjava-benchmark[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/java-benchmark/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mjava-benchmark[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 2 source files to /homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/java-benchmark/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mjava-benchmark[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/java-benchmark/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mjava-benchmark[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.17:test[m [1m(default-test)[m @ [36mjava-benchmark[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36mjava-benchmark[0;1m ---[m
+[[1;34mINFO[m] Building jar: /homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/java-benchmark/target/java-benchmark-1.0.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-shade-plugin:3.2.1:shade[m [1m(default)[m @ [36mjava-benchmark[0;1m ---[m
+[[1;34mINFO[m] Including org.openjdk.jmh:jmh-core:jar:1.23 in the shaded jar.
+[[1;34mINFO[m] Including net.sf.jopt-simple:jopt-simple:jar:4.6 in the shaded jar.
+[[1;34mINFO[m] Including org.apache.commons:commons-math3:jar:3.2 in the shaded jar.
+[[1;34mINFO[m] Replacing /homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/java-benchmark/target/benchmarks.jar with /homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/java-benchmark/target/java-benchmark-1.0-shaded.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:2.5.1:install[m [1m(default-install)[m @ [36mjava-benchmark[0;1m ---[m
+[[1;34mINFO[m] Installing /homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/java-benchmark/target/java-benchmark-1.0.jar to /homes/hh1919/.m2/repository/uk/ac/ic/doc/co339/cw1/java-benchmark/1.0/java-benchmark-1.0.jar
+[[1;34mINFO[m] Installing /homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/java-benchmark/pom.xml to /homes/hh1919/.m2/repository/uk/ac/ic/doc/co339/cw1/java-benchmark/1.0/java-benchmark-1.0.pom
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  2.090 s
+[[1;34mINFO[m] Finished at: 2020-02-12T17:18:31Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+# JMH version: 1.23
+# VM version: JDK 1.8.0_231, Java HotSpot(TM) 64-Bit Server VM, 25.231-b11
+# VM invoker: /usr/lib/jvm/oracle-java8-jdk-amd64/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: uk.ac.ic.doc.co339.cw1.MyBenchmark.baseFlink_SelectNearestCenterMap
+
+# Run progress: 0.00% complete, ETA 00:33:20
+# Fork: 1 of 5
+# Warmup Iteration   1: Test point: -8.306899060186566 -52.10657384164931
+2017.680 ns/op
+# Warmup Iteration   2: 2064.692 ns/op
+# Warmup Iteration   3: 2071.771 ns/op
+# Warmup Iteration   4: 2069.053 ns/op
+# Warmup Iteration   5: 2069.724 ns/op
+Iteration   1: 2069.305 ns/op
+Iteration   2: 2065.735 ns/op
+Iteration   3: 2068.303 ns/op
+Iteration   4: 2066.736 ns/op
+Iteration   5: 2074.632 ns/op
+
+# Run progress: 5.00% complete, ETA 00:31:43
+# Fork: 2 of 5
+# Warmup Iteration   1: Test point: -40.93832222944331 17.404405434188803
+1963.532 ns/op
+# Warmup Iteration   2: 2010.754 ns/op
+# Warmup Iteration   3: 2019.177 ns/op
+# Warmup Iteration   4: 2012.473 ns/op
+# Warmup Iteration   5: 2018.804 ns/op
+Iteration   1: 2016.992 ns/op
+Iteration   2: 2022.396 ns/op
+Iteration   3: 2020.021 ns/op
+Iteration   4: 2024.600 ns/op
+Iteration   5: 2014.228 ns/op
+
+# Run progress: 10.00% complete, ETA 00:30:03
+# Fork: 3 of 5
+# Warmup Iteration   1: Test point: -21.067664201393647 42.67646249260291
+1989.052 ns/op
+# Warmup Iteration   2: 2049.884 ns/op
+# Warmup Iteration   3: 2045.996 ns/op
+# Warmup Iteration   4: 2046.523 ns/op
+# Warmup Iteration   5: 2044.114 ns/op
+Iteration   1: 2043.369 ns/op
+Iteration   2: 2055.515 ns/op
+Iteration   3: 2055.581 ns/op
+Iteration   4: 2042.746 ns/op
+Iteration   5: 2044.561 ns/op
+
+# Run progress: 15.00% complete, ETA 00:28:22
+# Fork: 4 of 5
+# Warmup Iteration   1: Test point: -33.658944135657876 20.103459830908548
+1979.012 ns/op
+# Warmup Iteration   2: 2039.774 ns/op
+# Warmup Iteration   3: 2033.024 ns/op
+# Warmup Iteration   4: 2037.777 ns/op
+# Warmup Iteration   5: 2032.756 ns/op
+Iteration   1: 2026.383 ns/op
+Iteration   2: 2034.867 ns/op
+Iteration   3: 2028.198 ns/op
+Iteration   4: 2028.802 ns/op
+Iteration   5: 2040.099 ns/op
+
+# Run progress: 20.00% complete, ETA 00:26:42
+# Fork: 5 of 5
+# Warmup Iteration   1: Test point: -21.19301049774537 -37.89525039616117
+2015.671 ns/op
+# Warmup Iteration   2: 2073.456 ns/op
+# Warmup Iteration   3: 2065.859 ns/op
+# Warmup Iteration   4: 2063.885 ns/op
+# Warmup Iteration   5: 2065.088 ns/op
+Iteration   1: 2068.144 ns/op
+Iteration   2: 2064.775 ns/op
+Iteration   3: 2067.612 ns/op
+Iteration   4: 2065.314 ns/op
+Iteration   5: 2068.077 ns/op
+
+
+Result "uk.ac.ic.doc.co339.cw1.MyBenchmark.baseFlink_SelectNearestCenterMap":
+  2047.080 ±(99.9%) 15.075 ns/op [Average]
+  (min, avg, max) = (2014.228, 2047.080, 2074.632), stdev = 20.125
+  CI (99.9%): [2032.005, 2062.155] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 1.8.0_231, Java HotSpot(TM) 64-Bit Server VM, 25.231-b11
+# VM invoker: /usr/lib/jvm/oracle-java8-jdk-amd64/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: uk.ac.ic.doc.co339.cw1.MyBenchmark.eliminateCandidatesFromDistanceCalc_SelectNearestCenterMap
+
+# Run progress: 25.00% complete, ETA 00:25:02
+# Fork: 1 of 5
+# Warmup Iteration   1: Test point: 56.09966895913277 49.91245805974842
+2894.571 ns/op
+# Warmup Iteration   2: 2897.333 ns/op
+# Warmup Iteration   3: 2924.975 ns/op
+# Warmup Iteration   4: 2935.968 ns/op
+# Warmup Iteration   5: 2929.610 ns/op
+Iteration   1: 2926.106 ns/op
+Iteration   2: 2932.233 ns/op
+Iteration   3: 2926.835 ns/op
+Iteration   4: 2915.992 ns/op
+Iteration   5: 2921.985 ns/op
+
+# Run progress: 30.00% complete, ETA 00:23:22
+# Fork: 2 of 5
+# Warmup Iteration   1: Test point: 1.0373886397647567 23.356422283577317
+2879.923 ns/op
+# Warmup Iteration   2: 3903.283 ns/op
+# Warmup Iteration   3: 2872.372 ns/op
+# Warmup Iteration   4: 2866.824 ns/op
+# Warmup Iteration   5: 2876.739 ns/op
+Iteration   1: 2873.947 ns/op
+Iteration   2: 2867.878 ns/op
+Iteration   3: 2873.852 ns/op
+Iteration   4: 2874.531 ns/op
+Iteration   5: 2876.311 ns/op
+
+# Run progress: 35.00% complete, ETA 00:21:42
+# Fork: 3 of 5
+# Warmup Iteration   1: Test point: -55.08133699873617 26.81651275011511
+2849.353 ns/op
+# Warmup Iteration   2: 3653.833 ns/op
+# Warmup Iteration   3: 3356.569 ns/op
+# Warmup Iteration   4: 3352.486 ns/op
+# Warmup Iteration   5: 3358.565 ns/op
+Iteration   1: 3357.081 ns/op
+Iteration   2: 3354.165 ns/op
+Iteration   3: 3353.722 ns/op
+Iteration   4: 3353.632 ns/op
+Iteration   5: 3349.358 ns/op
+
+# Run progress: 40.00% complete, ETA 00:20:02
+# Fork: 4 of 5
+# Warmup Iteration   1: Test point: 22.68475160770231 7.832393270148273
+2869.662 ns/op
+# Warmup Iteration   2: 4212.759 ns/op
+# Warmup Iteration   3: 2876.750 ns/op
+# Warmup Iteration   4: 2876.442 ns/op
+# Warmup Iteration   5: 2882.581 ns/op
+Iteration   1: 2874.401 ns/op
+Iteration   2: 2874.506 ns/op
+Iteration   3: 2876.158 ns/op
+Iteration   4: 2874.888 ns/op
+Iteration   5: 2871.111 ns/op
+
+# Run progress: 45.00% complete, ETA 00:18:21
+# Fork: 5 of 5
+# Warmup Iteration   1: Test point: -9.928130858931546 -57.89957609244596
+3976.612 ns/op
+# Warmup Iteration   2: 3203.002 ns/op
+# Warmup Iteration   3: 3977.192 ns/op
+# Warmup Iteration   4: 3960.050 ns/op
+# Warmup Iteration   5: 3969.380 ns/op
+Iteration   1: 3962.147 ns/op
+Iteration   2: 3974.418 ns/op
+Iteration   3: 3972.398 ns/op
+Iteration   4: 3973.581 ns/op
+Iteration   5: 3967.148 ns/op
+
+
+Result "uk.ac.ic.doc.co339.cw1.MyBenchmark.eliminateCandidatesFromDistanceCalc_SelectNearestCenterMap":
+  3199.135 ±(99.9%) 325.289 ns/op [Average]
+  (min, avg, max) = (2867.878, 3199.135, 3974.418), stdev = 434.251
+  CI (99.9%): [2873.847, 3524.424] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 1.8.0_231, Java HotSpot(TM) 64-Bit Server VM, 25.231-b11
+# VM invoker: /usr/lib/jvm/oracle-java8-jdk-amd64/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: uk.ac.ic.doc.co339.cw1.MyBenchmark.inlineDistanceFunction_SelectNearestCenterMap
+
+# Run progress: 50.00% complete, ETA 00:16:41
+# Fork: 1 of 5
+# Warmup Iteration   1: Test point: -36.33459568339052 -53.4562558867531
+2121.778 ns/op
+# Warmup Iteration   2: 2178.899 ns/op
+# Warmup Iteration   3: 2178.042 ns/op
+# Warmup Iteration   4: 2168.793 ns/op
+# Warmup Iteration   5: 2177.769 ns/op
+Iteration   1: 2172.876 ns/op
+Iteration   2: 2181.418 ns/op
+Iteration   3: 2176.034 ns/op
+Iteration   4: 2173.678 ns/op
+Iteration   5: 2171.272 ns/op
+
+# Run progress: 55.00% complete, ETA 00:15:01
+# Fork: 2 of 5
+# Warmup Iteration   1: Test point: 32.96543989545255 -40.06869221812815
+2145.889 ns/op
+# Warmup Iteration   2: 2215.890 ns/op
+# Warmup Iteration   3: 2231.035 ns/op
+# Warmup Iteration   4: 2229.714 ns/op
+# Warmup Iteration   5: 2231.610 ns/op
+Iteration   1: 2228.036 ns/op
+Iteration   2: 2230.479 ns/op
+Iteration   3: 2228.829 ns/op
+Iteration   4: 2228.088 ns/op
+Iteration   5: 2229.867 ns/op
+
+# Run progress: 60.00% complete, ETA 00:13:21
+# Fork: 3 of 5
+# Warmup Iteration   1: Test point: -49.361878371343536 30.521577480286496
+2177.093 ns/op
+# Warmup Iteration   2: 2211.523 ns/op
+# Warmup Iteration   3: 2215.887 ns/op
+# Warmup Iteration   4: 2215.876 ns/op
+# Warmup Iteration   5: 2215.613 ns/op
+Iteration   1: 2205.648 ns/op
+Iteration   2: 2216.481 ns/op
+Iteration   3: 2225.512 ns/op
+Iteration   4: 2214.184 ns/op
+Iteration   5: 2219.103 ns/op
+
+# Run progress: 65.00% complete, ETA 00:11:41
+# Fork: 4 of 5
+# Warmup Iteration   1: Test point: 56.808019567274 -38.85129598694332
+1967.926 ns/op
+# Warmup Iteration   2: 2039.499 ns/op
+# Warmup Iteration   3: 2027.440 ns/op
+# Warmup Iteration   4: 2029.833 ns/op
+# Warmup Iteration   5: 2030.998 ns/op
+Iteration   1: 2033.174 ns/op
+Iteration   2: 2029.078 ns/op
+Iteration   3: 2033.377 ns/op
+Iteration   4: 2034.341 ns/op
+Iteration   5: 2033.335 ns/op
+
+# Run progress: 70.00% complete, ETA 00:10:00
+# Fork: 5 of 5
+# Warmup Iteration   1: Test point: -4.835119398505128 -43.17035183901105
+2014.309 ns/op
+# Warmup Iteration   2: 2040.122 ns/op
+# Warmup Iteration   3: 2050.358 ns/op
+# Warmup Iteration   4: 2061.530 ns/op
+# Warmup Iteration   5: 2050.776 ns/op
+Iteration   1: 2064.304 ns/op
+Iteration   2: 2070.232 ns/op
+Iteration   3: 2057.027 ns/op
+Iteration   4: 2052.724 ns/op
+Iteration   5: 2052.230 ns/op
+
+
+Result "uk.ac.ic.doc.co339.cw1.MyBenchmark.inlineDistanceFunction_SelectNearestCenterMap":
+  2142.453 ±(99.9%) 62.182 ns/op [Average]
+  (min, avg, max) = (2029.078, 2142.453, 2230.479), stdev = 83.011
+  CI (99.9%): [2080.271, 2204.635] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 1.8.0_231, Java HotSpot(TM) 64-Bit Server VM, 25.231-b11
+# VM invoker: /usr/lib/jvm/oracle-java8-jdk-amd64/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: uk.ac.ic.doc.co339.cw1.MyBenchmark.removeUnnecessarySQRT_SelectNearestCenterMap
+
+# Run progress: 75.00% complete, ETA 00:08:20
+# Fork: 1 of 5
+# Warmup Iteration   1: Test point: 29.26531565435549 52.138712645048514
+2209.846 ns/op
+# Warmup Iteration   2: 2242.125 ns/op
+# Warmup Iteration   3: 2253.666 ns/op
+# Warmup Iteration   4: 2251.667 ns/op
+# Warmup Iteration   5: 2250.621 ns/op
+Iteration   1: 2246.532 ns/op
+Iteration   2: 2249.164 ns/op
+Iteration   3: 2246.853 ns/op
+Iteration   4: 2255.517 ns/op
+Iteration   5: 2252.319 ns/op
+
+# Run progress: 80.00% complete, ETA 00:06:40
+# Fork: 2 of 5
+# Warmup Iteration   1: Test point: -3.5437179361734366 46.217988671084115
+2123.590 ns/op
+# Warmup Iteration   2: 2203.116 ns/op
+# Warmup Iteration   3: 2198.720 ns/op
+# Warmup Iteration   4: 2195.301 ns/op
+# Warmup Iteration   5: 2198.771 ns/op
+Iteration   1: 2201.307 ns/op
+Iteration   2: 2210.465 ns/op
+Iteration   3: 2200.529 ns/op
+Iteration   4: 2199.743 ns/op
+Iteration   5: 2211.183 ns/op
+
+# Run progress: 85.00% complete, ETA 00:05:00
+# Fork: 3 of 5
+# Warmup Iteration   1: Test point: -0.7796938327092633 -26.498996714432977
+1962.011 ns/op
+# Warmup Iteration   2: 2026.162 ns/op
+# Warmup Iteration   3: 2041.123 ns/op
+# Warmup Iteration   4: 2030.003 ns/op
+# Warmup Iteration   5: 2032.175 ns/op
+Iteration   1: 2030.312 ns/op
+Iteration   2: 2030.970 ns/op
+Iteration   3: 2028.430 ns/op
+Iteration   4: 2028.592 ns/op
+Iteration   5: 2028.870 ns/op
+
+# Run progress: 90.00% complete, ETA 00:03:20
+# Fork: 4 of 5
+# Warmup Iteration   1: Test point: -28.096508073129073 -3.712480786048779
+2132.905 ns/op
+# Warmup Iteration   2: 2182.869 ns/op
+# Warmup Iteration   3: 2187.006 ns/op
+# Warmup Iteration   4: 2186.017 ns/op
+# Warmup Iteration   5: 2189.895 ns/op
+Iteration   1: 2186.790 ns/op
+Iteration   2: 2185.039 ns/op
+Iteration   3: 2182.979 ns/op
+Iteration   4: 2186.655 ns/op
+Iteration   5: 2187.766 ns/op
+
+# Run progress: 95.00% complete, ETA 00:01:40
+# Fork: 5 of 5
+# Warmup Iteration   1: Test point: 37.87438827357717 -13.702128035439458
+1966.028 ns/op
+# Warmup Iteration   2: 2030.809 ns/op
+# Warmup Iteration   3: 2046.648 ns/op
+# Warmup Iteration   4: 2046.258 ns/op
+# Warmup Iteration   5: 2038.185 ns/op
+Iteration   1: 2040.648 ns/op
+Iteration   2: 2050.378 ns/op
+Iteration   3: 2047.918 ns/op
+Iteration   4: 2053.307 ns/op
+Iteration   5: 2056.310 ns/op
+
+
+Result "uk.ac.ic.doc.co339.cw1.MyBenchmark.removeUnnecessarySQRT_SelectNearestCenterMap":
+  2143.943 ±(99.9%) 67.319 ns/op [Average]
+  (min, avg, max) = (2028.430, 2143.943, 2255.517), stdev = 89.868
+  CI (99.9%): [2076.624, 2211.261] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:33:23
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                                               Mode  Cnt     Score     Error  Units
+MyBenchmark.baseFlink_SelectNearestCenterMap                            avgt   25  2047.080 ±  15.075  ns/op
+MyBenchmark.eliminateCandidatesFromDistanceCalc_SelectNearestCenterMap  avgt   25  3199.135 ± 325.289  ns/op
+MyBenchmark.inlineDistanceFunction_SelectNearestCenterMap               avgt   25  2142.453 ±  62.182  ns/op
+MyBenchmark.removeUnnecessarySQRT_SelectNearestCenterMap                avgt   25  2143.943 ±  67.319  ns/op
+hh1919@texel06:java-benchmark$ mvn install && java -jar target/benchmarks.jar[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kscti[K[Kript output3.txt
+Script started, file is output3.txt
+hh1919@texel06:java-benchmark$ exitmvn install && java -jar target/benchmarks.jar[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kmvn install && java -jar target/benchmarks.jar
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------< [0;36muk.ac.ic.doc.co339.cw1:java-benchmark[0;1m >----------------[m
+[[1;34mINFO[m] [1mBuilding JMH benchmark sample: Java 1.0[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mjava-benchmark[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/java-benchmark/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mjava-benchmark[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 2 source files to /homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/java-benchmark/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mjava-benchmark[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/java-benchmark/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mjava-benchmark[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.17:test[m [1m(default-test)[m @ [36mjava-benchmark[0;1m ---[m
+[[1;34mINFO[m] No tests to run.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36mjava-benchmark[0;1m ---[m
+[[1;34mINFO[m] Building jar: /homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/java-benchmark/target/java-benchmark-1.0.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-shade-plugin:3.2.1:shade[m [1m(default)[m @ [36mjava-benchmark[0;1m ---[m
+[[1;34mINFO[m] Including org.openjdk.jmh:jmh-core:jar:1.23 in the shaded jar.
+[[1;34mINFO[m] Including net.sf.jopt-simple:jopt-simple:jar:4.6 in the shaded jar.
+[[1;34mINFO[m] Including org.apache.commons:commons-math3:jar:3.2 in the shaded jar.
+[[1;34mINFO[m] Replacing /homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/java-benchmark/target/benchmarks.jar with /homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/java-benchmark/target/java-benchmark-1.0-shaded.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:2.5.1:install[m [1m(default-install)[m @ [36mjava-benchmark[0;1m ---[m
+[[1;34mINFO[m] Installing /homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/java-benchmark/target/java-benchmark-1.0.jar to /homes/hh1919/.m2/repository/uk/ac/ic/doc/co339/cw1/java-benchmark/1.0/java-benchmark-1.0.jar
+[[1;34mINFO[m] Installing /homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/java-benchmark/pom.xml to /homes/hh1919/.m2/repository/uk/ac/ic/doc/co339/cw1/java-benchmark/1.0/java-benchmark-1.0.pom
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  1.818 s
+[[1;34mINFO[m] Finished at: 2020-02-12T20:25:47Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+# JMH version: 1.23
+# VM version: JDK 1.8.0_231, Java HotSpot(TM) 64-Bit Server VM, 25.231-b11
+# VM invoker: /usr/lib/jvm/oracle-java8-jdk-amd64/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: uk.ac.ic.doc.co339.cw1.MyBenchmark.baseFlink_SelectNearestCenterMap
+
+# Run progress: 0.00% complete, ETA 00:33:20
+# Fork: 1 of 5
+# Warmup Iteration   1: Test point: 59.791391593175206 39.49163179344542
+2006.894 ns/op
+# Warmup Iteration   2: 2025.992 ns/op
+# Warmup Iteration   3: 2036.926 ns/op
+# Warmup Iteration   4: 2029.458 ns/op
+# Warmup Iteration   5: 2021.073 ns/op
+Iteration   1: 2023.985 ns/op
+Iteration   2: 2049.437 ns/op
+Iteration   3: 2036.217 ns/op
+Iteration   4: 2027.630 ns/op
+Iteration   5: 2039.518 ns/op
+
+# Run progress: 5.00% complete, ETA 00:31:44
+# Fork: 2 of 5
+# Warmup Iteration   1: Test point: 51.55408432505237 8.635135595859282
+2215.970 ns/op
+# Warmup Iteration   2: 2262.732 ns/op
+# Warmup Iteration   3: 2253.364 ns/op
+# Warmup Iteration   4: 2285.645 ns/op
+# Warmup Iteration   5: 2271.778 ns/op
+Iteration   1: 2268.865 ns/op
+Iteration   2: 2292.322 ns/op
+Iteration   3: 2289.174 ns/op
+Iteration   4: 2274.930 ns/op
+Iteration   5: 2267.865 ns/op
+
+# Run progress: 10.00% complete, ETA 00:30:03
+# Fork: 3 of 5
+# Warmup Iteration   1: Test point: -16.40445313163758 33.24462355330492
+2198.041 ns/op
+# Warmup Iteration   2: 2242.909 ns/op
+# Warmup Iteration   3: 2219.958 ns/op
+# Warmup Iteration   4: 2208.083 ns/op
+# Warmup Iteration   5: 2217.678 ns/op
+Iteration   1: 2259.510 ns/op
+Iteration   2: 2215.434 ns/op
+Iteration   3: 2216.864 ns/op
+Iteration   4: 2216.042 ns/op
+Iteration   5: 2214.634 ns/op
+
+# Run progress: 15.00% complete, ETA 00:28:22
+# Fork: 4 of 5
+# Warmup Iteration   1: Test point: -57.61065347596305 2.1616347865594605
+2328.521 ns/op
+# Warmup Iteration   2: 2378.307 ns/op
+# Warmup Iteration   3: 2374.575 ns/op
+# Warmup Iteration   4: 2377.258 ns/op
+# Warmup Iteration   5: 2371.811 ns/op
+Iteration   1: 2367.368 ns/op
+Iteration   2: 2382.642 ns/op
+Iteration   3: 2378.164 ns/op
+Iteration   4: 2381.909 ns/op
+Iteration   5: 2358.852 ns/op
+
+# Run progress: 20.00% complete, ETA 00:26:42
+# Fork: 5 of 5
+# Warmup Iteration   1: Test point: -44.4200070822762 -35.85214593865182
+2193.102 ns/op
+# Warmup Iteration   2: 2229.477 ns/op
+# Warmup Iteration   3: 2220.833 ns/op
+# Warmup Iteration   4: 2219.850 ns/op
+# Warmup Iteration   5: 2226.272 ns/op
+Iteration   1: 2229.559 ns/op
+Iteration   2: 2229.222 ns/op
+Iteration   3: 2222.180 ns/op
+Iteration   4: 2229.135 ns/op
+Iteration   5: 2218.041 ns/op
+
+
+Result "uk.ac.ic.doc.co339.cw1.MyBenchmark.baseFlink_SelectNearestCenterMap":
+  2227.580 ±(99.9%) 84.822 ns/op [Average]
+  (min, avg, max) = (2023.985, 2227.580, 2382.642), stdev = 113.235
+  CI (99.9%): [2142.758, 2312.402] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 1.8.0_231, Java HotSpot(TM) 64-Bit Server VM, 25.231-b11
+# VM invoker: /usr/lib/jvm/oracle-java8-jdk-amd64/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: uk.ac.ic.doc.co339.cw1.MyBenchmark.eliminateCandidatesFromDistanceCalc_SelectNearestCenterMap
+
+# Run progress: 25.00% complete, ETA 00:25:02
+# Fork: 1 of 5
+# Warmup Iteration   1: Test point: 26.927104053008946 48.36397768210982
+2914.121 ns/op
+# Warmup Iteration   2: 3606.583 ns/op
+# Warmup Iteration   3: 2915.875 ns/op
+# Warmup Iteration   4: 2912.198 ns/op
+# Warmup Iteration   5: 2915.211 ns/op
+Iteration   1: 2921.582 ns/op
+Iteration   2: 2918.574 ns/op
+Iteration   3: 2916.938 ns/op
+Iteration   4: 2922.158 ns/op
+Iteration   5: 2924.596 ns/op
+
+# Run progress: 30.00% complete, ETA 00:23:22
+# Fork: 2 of 5
+# Warmup Iteration   1: Test point: 13.540305181891185 9.675852917674035
+3212.205 ns/op
+# Warmup Iteration   2: 4499.740 ns/op
+# Warmup Iteration   3: 3207.588 ns/op
+# Warmup Iteration   4: 3211.441 ns/op
+# Warmup Iteration   5: 3218.694 ns/op
+Iteration   1: 3211.915 ns/op
+Iteration   2: 3199.222 ns/op
+Iteration   3: 3190.895 ns/op
+Iteration   4: 3203.094 ns/op
+Iteration   5: 3204.814 ns/op
+
+# Run progress: 35.00% complete, ETA 00:21:42
+# Fork: 3 of 5
+# Warmup Iteration   1: Test point: -36.3713624781293 48.858454741087385
+3498.680 ns/op
+# Warmup Iteration   2: 3533.575 ns/op
+# Warmup Iteration   3: 3106.586 ns/op
+# Warmup Iteration   4: 3104.411 ns/op
+# Warmup Iteration   5: 3120.362 ns/op
+Iteration   1: 3111.159 ns/op
+Iteration   2: 3107.893 ns/op
+Iteration   3: 3119.247 ns/op
+Iteration   4: 3126.315 ns/op
+Iteration   5: 3139.810 ns/op
+
+# Run progress: 40.00% complete, ETA 00:20:02
+# Fork: 4 of 5
+# Warmup Iteration   1: Test point: 35.7586622808399 22.208719158342916
+2927.160 ns/op
+# Warmup Iteration   2: 3608.151 ns/op
+# Warmup Iteration   3: 2914.933 ns/op
+# Warmup Iteration   4: 2931.207 ns/op
+# Warmup Iteration   5: 2931.990 ns/op
+Iteration   1: 2924.679 ns/op
+Iteration   2: 2919.568 ns/op
+Iteration   3: 2913.409 ns/op
+Iteration   4: 2929.922 ns/op
+Iteration   5: 2925.430 ns/op
+
+# Run progress: 45.00% complete, ETA 00:18:21
+# Fork: 5 of 5
+# Warmup Iteration   1: Test point: 28.963865882104372 23.545244978165655
+2910.295 ns/op
+# Warmup Iteration   2: 2926.932 ns/op
+# Warmup Iteration   3: 2917.769 ns/op
+# Warmup Iteration   4: 2912.504 ns/op
+# Warmup Iteration   5: 2913.876 ns/op
+Iteration   1: 2911.768 ns/op
+Iteration   2: 2915.299 ns/op
+Iteration   3: 2906.571 ns/op
+Iteration   4: 2922.910 ns/op
+Iteration   5: 2917.444 ns/op
+
+
+Result "uk.ac.ic.doc.co339.cw1.MyBenchmark.eliminateCandidatesFromDistanceCalc_SelectNearestCenterMap":
+  3016.208 ±(99.9%) 92.929 ns/op [Average]
+  (min, avg, max) = (2906.571, 3016.208, 3211.915), stdev = 124.058
+  CI (99.9%): [2923.279, 3109.138] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 1.8.0_231, Java HotSpot(TM) 64-Bit Server VM, 25.231-b11
+# VM invoker: /usr/lib/jvm/oracle-java8-jdk-amd64/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: uk.ac.ic.doc.co339.cw1.MyBenchmark.inlineDistanceFunction_SelectNearestCenterMap
+
+# Run progress: 50.00% complete, ETA 00:16:41
+# Fork: 1 of 5
+# Warmup Iteration   1: Test point: 10.717350781089834 23.00139071483828
+2159.557 ns/op
+# Warmup Iteration   2: 2222.520 ns/op
+# Warmup Iteration   3: 2218.342 ns/op
+# Warmup Iteration   4: 2221.704 ns/op
+# Warmup Iteration   5: 2219.010 ns/op
+Iteration   1: 2225.377 ns/op
+Iteration   2: 2211.249 ns/op
+Iteration   3: 2202.295 ns/op
+Iteration   4: 2203.625 ns/op
+Iteration   5: 2203.626 ns/op
+
+# Run progress: 55.00% complete, ETA 00:15:01
+# Fork: 2 of 5
+# Warmup Iteration   1: Test point: -38.08888429948476 -36.3305684501233
+2167.869 ns/op
+# Warmup Iteration   2: 2221.407 ns/op
+# Warmup Iteration   3: 2229.766 ns/op
+# Warmup Iteration   4: 2236.638 ns/op
+# Warmup Iteration   5: 2225.518 ns/op
+Iteration   1: 2231.097 ns/op
+Iteration   2: 2266.622 ns/op
+Iteration   3: 2259.381 ns/op
+Iteration   4: 2260.607 ns/op
+Iteration   5: 2225.308 ns/op
+
+# Run progress: 60.00% complete, ETA 00:13:21
+# Fork: 3 of 5
+# Warmup Iteration   1: Test point: -55.50845331029165 -9.40984894293932
+1978.749 ns/op
+# Warmup Iteration   2: 2049.978 ns/op
+# Warmup Iteration   3: 2055.058 ns/op
+# Warmup Iteration   4: 2037.691 ns/op
+# Warmup Iteration   5: 2042.620 ns/op
+Iteration   1: 2047.114 ns/op
+Iteration   2: 2037.051 ns/op
+Iteration   3: 2049.097 ns/op
+Iteration   4: 2041.311 ns/op
+Iteration   5: 2038.252 ns/op
+
+# Run progress: 65.00% complete, ETA 00:11:41
+# Fork: 4 of 5
+# Warmup Iteration   1: Test point: -55.627440664310384 -19.96950111717559
+2282.898 ns/op
+# Warmup Iteration   2: 2318.693 ns/op
+# Warmup Iteration   3: 2323.427 ns/op
+# Warmup Iteration   4: 2333.259 ns/op
+# Warmup Iteration   5: 2331.868 ns/op
+Iteration   1: 2331.285 ns/op
+Iteration   2: 2328.012 ns/op
+Iteration   3: 2333.415 ns/op
+Iteration   4: 2325.924 ns/op
+Iteration   5: 2365.529 ns/op
+
+# Run progress: 70.00% complete, ETA 00:10:00
+# Fork: 5 of 5
+# Warmup Iteration   1: Test point: -7.099661596873496 -52.908238462501856
+2001.986 ns/op
+# Warmup Iteration   2: 2069.499 ns/op
+# Warmup Iteration   3: 2080.957 ns/op
+# Warmup Iteration   4: 2072.764 ns/op
+# Warmup Iteration   5: 2078.558 ns/op
+Iteration   1: 2077.577 ns/op
+Iteration   2: 2073.447 ns/op
+Iteration   3: 2075.275 ns/op
+Iteration   4: 2077.699 ns/op
+Iteration   5: 2065.757 ns/op
+
+
+Result "uk.ac.ic.doc.co339.cw1.MyBenchmark.inlineDistanceFunction_SelectNearestCenterMap":
+  2182.237 ±(99.9%) 84.364 ns/op [Average]
+  (min, avg, max) = (2037.051, 2182.237, 2365.529), stdev = 112.624
+  CI (99.9%): [2097.873, 2266.602] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 1.8.0_231, Java HotSpot(TM) 64-Bit Server VM, 25.231-b11
+# VM invoker: /usr/lib/jvm/oracle-java8-jdk-amd64/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: uk.ac.ic.doc.co339.cw1.MyBenchmark.removeUnnecessarySQRT_SelectNearestCenterMap
+
+# Run progress: 75.00% complete, ETA 00:08:20
+# Fork: 1 of 5
+# Warmup Iteration   1: Test point: 0.06735441373423612 -58.448632740917326
+2133.875 ns/op
+# Warmup Iteration   2: 2178.737 ns/op
+# Warmup Iteration   3: 2184.003 ns/op
+# Warmup Iteration   4: 2191.145 ns/op
+# Warmup Iteration   5: 2192.225 ns/op
+Iteration   1: 2217.835 ns/op
+Iteration   2: 2195.527 ns/op
+Iteration   3: 2192.426 ns/op
+Iteration   4: 2192.384 ns/op
+Iteration   5: 2195.605 ns/op
+
+# Run progress: 80.00% complete, ETA 00:06:40
+# Fork: 2 of 5
+# Warmup Iteration   1: Test point: -30.486743675699117 34.80660742962539
+1986.574 ns/op
+# Warmup Iteration   2: 2026.927 ns/op
+# Warmup Iteration   3: 2028.820 ns/op
+# Warmup Iteration   4: 2025.348 ns/op
+# Warmup Iteration   5: 2034.618 ns/op
+Iteration   1: 2028.599 ns/op
+Iteration   2: 2030.012 ns/op
+Iteration   3: 2040.378 ns/op
+Iteration   4: 2032.143 ns/op
+Iteration   5: 2027.711 ns/op
+
+# Run progress: 85.00%

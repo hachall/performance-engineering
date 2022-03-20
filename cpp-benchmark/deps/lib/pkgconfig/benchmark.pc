@@ -1,0 +1,11 @@
+prefix=/homes/hh1919/Documents/code/performance-eng/performanceengineeringcw1_hh1919/cpp-benchmark/deps
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: benchmark
+Description: Google microbenchmark framework
+Version: 0.0.0
+
+Libs: -L${libdir} -lbenchmark
+Cflags: -I${includedir}

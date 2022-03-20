@@ -1,0 +1,16 @@
+----------------------------------------------------------------
+Benchmark                         Time           CPU Iterations
+----------------------------------------------------------------
+flinkBaseline                  1896 ns       1896 ns     371426
+usingVector                    1874 ns       1874 ns     371293
+functionInline                 1439 ns       1439 ns     486949
+removeRedundantSQRT             855 ns        855 ns     819629
+skipInfeasibleCandidates       1192 ns       1192 ns     955578
+obscureDistAlgo/1              1621 ns       1621 ns     433282
+obscureDistAlgo/2              1791 ns       1791 ns     390326
+obscureDistAlgo/3              5805 ns       5805 ns     100000
+vectorParallelization           755 ns        755 ns     924132
+
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -msse3")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mavx")

@@ -1,0 +1,22 @@
+Script started on 2020-02-12 16:11:33+0000
+hh1919@texel06:Release$ git pushcommit -m "java benchmarks built - 4 small varitions to tune euclidean distance"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush[K[K./Benchmark
+2020-02-12 16:11:41
+Running ./Benchmark
+Run on (8 X 4500 MHz CPU s)
+CPU Caches:
+  L1 Data 32K (x4)
+  L1 Instruction 32K (x4)
+  L2 Unified 256K (x4)
+  L3 Unified 8192K (x1)
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+----------------------------------------------------------------
+Benchmark                         Time           CPU Iterations
+----------------------------------------------------------------
+[0;32mflinkBaseline            [m[0;33m       210 ns        210 ns [m[0;36m   3269808[m
+[m[0;32mfunctionInline           [m[0;33m       153 ns        153 ns [m[0;36m   4558853[m
+[m[0;32mremoveRedundantSQRT      [m[0;33m        97 ns         97 ns [m[0;36m   7468835[m
+[m[0;32mskipInfeasibleCandidates [m[0;33m       105 ns        105 ns [m[0;36m   6908177[m
+[mhh1919@texel06:Release$ exit
+exit
+
+Script done on 2020-02-12 16:11:48+0000
